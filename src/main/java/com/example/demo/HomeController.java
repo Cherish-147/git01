@@ -7,6 +7,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.multipart.MultipartFile;
 
+import javax.servlet.http.HttpServletResponse;
+import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
 
@@ -30,6 +32,15 @@ public class HomeController {
         f2.close();
 
         return "hello";
+    }
+
+    @RequestMapping(value="/abc")
+    public void getUploadedPicture(HttpServletResponse response) throws IOException {
+        //通过response写入图像文件内容
+        response.addHeader("content-type", "image/jpg");
+
+        FileInputStream f = new FileInputStream("d:/pic/a.jpg");
+        IOUtils.copy(f, response.getOutputStream());
     }
 
 
