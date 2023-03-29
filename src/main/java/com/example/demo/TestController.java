@@ -25,4 +25,12 @@ public class TestController {
         model.addAttribute("book", book);
         return "test/book";
     }
+
+    @GetMapping("/test/array")
+    String ArrayTest(Model model)
+    {
+        int[] intArray = {1,2,3,4,5,6,7};
+        model.addAttribute("intArr", intArray);
+        return "test/array";
+    }
 }
