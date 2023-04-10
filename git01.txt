@@ -1,0 +1,31 @@
+git init
+
+git status
+
+git add 01.py
+
+git init //初始化仓库
+git add .(文件name)                  //添加文件到本地暂存
+git commit -m “first commit”        //添加文件描述信息
+git remote add origin    远程仓库地址 //链接远程仓库
+git push -u origin master          //把本地仓库的文件推送到远程仓master                                      分支
+
+
+git clone https://www.000000.git//克隆
+
+
+
+////…or create a new repository on the command line
+echo "# git01" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/Cherish-147/git01.git
+git push -u origin main
+
+
+//…or push an existing repository from the command line
+git remote add origin https://github.com/Cherish-147/git01.git
+git branch -M main
+git push -u origin main
