@@ -27,7 +27,7 @@ public class HomeController {
         System.out.println(file.getSize());
         System.out.println(file.getOriginalFilename());
 
-        FileOutputStream f2 = new FileOutputStream("d:/pic/a.jpg");
+        FileOutputStream f2 = new FileOutputStream("G:\\111\\spring综合\\doc_submmit\\src\\main\\resources\\static\\1.jpg");
         IOUtils.copy(file.getInputStream(), f2);
         f2.close();
 
@@ -39,7 +39,8 @@ public class HomeController {
         //通过response写入图像文件内容
         response.addHeader("content-type", "image/jpg");
 
-        FileInputStream f = new FileInputStream("d:/pic/a.jpg");
+//        FileInputStream f = new FileInputStream("G:\\111\\spring综合\\doc_submmit\\src\\main\\resources");
+        FileInputStream f = new FileInputStream("G:\\111\\spring综合\\doc_submmit\\src\\main\\resources\\static\\1.jpg");
         IOUtils.copy(f, response.getOutputStream());
     }
 
