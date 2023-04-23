@@ -43,5 +43,5 @@ public class HomeController {
         IOUtils.copy(f, response.getOutputStream());
     }
 
-
+//只能同一个文件夹的图片的，否则报错
 }
