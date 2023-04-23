@@ -35,4 +35,9 @@ public class HomeController {
     String Support(){
         return "support";
     }
+
+    @RequestMapping("/layout")
+    String layout(){
+        return "layout";
+    }
 }
