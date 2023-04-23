@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:layout="http://www.ultraq.net.nz/web/thymeleaf/layout">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .site-name {
+            color: purple;
+            text-align: center;
+        }
+        .site--1 {
+
+            text-align: right;
+        }
+        body{background: #c6ef89
+        }
+        /*背景图片显示失败
+        https://blog.csdn.net/qq_43718758/article/details/123289401*/
+        body{background-image:url("../static/images/01.jpg") }
+    </style>
+</head>
+<!--<body BACKGROUND="01.jpg">-->
+<!--    style="background-repeat:no-repeat;&lt;!&ndash;设置图片不重复显示&ndash;&gt;-->
+<!--    background-attachment:fixed;&lt;!&ndash;设置图片的位置固定&ndash;&gt;-->
+<!--    background-size:100% 100%; ">&lt;!&ndash;设置图片达到窗口100%的比例&ndash;&gt;-->
+<!--    &lt;!&ndash;————————————————&ndash;&gt;-->
+<!--    &lt;!&ndash;版权声明：本文为CSDN博主「turbo夏日漱石」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。&ndash;&gt;-->
+<!--    &lt;!&ndash;原文链接：https://blog.csdn.net/qq_62799214/article/details/129464348&ndash;&gt;<body/>-->
+
+<body style="	background-repeat:no-repeat ;
+				background-size:100% 100%;
+				background-attachment: fixed;">
+
+    <h1 class="site-name">甜甜优惠</h1>
+    <hr />
+    <div th:replace="layout/header :: header"></div>
+    <div th:replace="layout/left :: left"></div>
+    <div th:replace="layout/footer :: footer"></div>
+
+    <div><a href="/about">用户页面</a></div>
+<!--    <div>-->
+<!--        <img src="../static/images/01.jpg" alt="显示不出来的图片">-->
+<!--        <a href="https://github.com/ityouknow/spring-boot-leaning/tree/gitbook_column1.0/%E7%AC%AC05%E8%AF%BE%EF%BC%9A%E6%A8%A1%E6%9D%BF%E5%BC%95%E6%93%8E%20Thymeleaf">-->
+<!--       这里也是布局页面     study！layout-->
+<!--        </a>-->
+
+<!--    </div>-->
+
+
+  <section layout:fragment="content">
+
+  </section>
+
+
+
+    <div class="site--1" th:replace="layout/copyright::copyright"></div>
+<hr />
+
+
+
+
+<a href="/support">技术支持</a>
+
+</body>
+</html>
