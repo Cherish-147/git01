@@ -13,4 +13,26 @@ public class HomeController {
         return "hello";
     }
 
+    @RequestMapping("/")
+    String Index()
+    {
+        return "redirect:/books";
+    }
+
+    @RequestMapping("/welcome")
+    String Welcome()
+    {
+        return "welcome";
+    }
+
+    @RequestMapping("/about")
+    String About()
+    {
+        return "about";
+    }
+    //ysq映射气
+    @RequestMapping("/support")
+    String Support(){
+        return "support";
+    }
 }
